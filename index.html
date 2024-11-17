@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Financial Analysis</title>
+
+  <!-- Open Graph meta tags -->
+  <meta property="og:title" content="Financial Analysis">
+  <meta property="og:description" content="A comprehensive analysis of financial data to evaluate investment opportunities and assess risk. Includes data cleaning, exploratory analysis, and visualization.">
+  <meta property="og:image" content="./assets/image/display-pic.jpg">
+  <meta property="og:url" content="jha-rajnish.github.io/financial_analysis/">
+  <meta property="og:type" content="Project">
+
+  <!-- favicon -->
+  <link rel="icon" type="image/svg+xml" sizes="any" href="./assets/icon/favicon.svg">
+  <link rel="apple-touch-icon" href="./assets/icon/favicon.png">
+
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+<div id="backgroundBlur" class="background-blur"></div>
+<div class="container content-container">
+  <div align="center" class="heading1">
+    Financial Analysis
+  </div>
+  <div class="divider-rounded"></div>
+
+  <div class="heading2">
+    Project Objective
+  </div>
+  <div class="divider-dashed"></div>
+  <p class="paragraph">
+    The objective of the Financial Analysis project is to provide a comprehensive evaluation of our financial performance across various dimensions.
+    This includes assessing sales trends, comparing gross and net sales with profits, examining price dynamics, visualizing geographic sales distribution, and analyzing discount strategies.
+    The goal is to deliver actionable insights to inform strategic decisions and enhance overall financial performance.
+  </p>
+  
+  <div align="center" class="heading2">
+    <h2>
+     Dashboard
+    </h2>
+   </div>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active" id="slide1">
+        <img src="./assets/dashboard/Page-01.jpg" class="img-thumbnail" alt="Page-01">
+      </div>
+
+      <div class="item" id="slide2">
+        <img src="./assets/dashboard/Page-02.jpg" class="img-thumbnail" alt="Page-02">
+      </div>
+
+      <div class="item" id="slide2">
+        <img src="./assets/dashboard/Page-03.jpg" class="img-thumbnail" alt="Page-03">
+      </div>
+
+      <div class="item" id="slide2">
+        <img src="./assets/dashboard/Page-04.jpg" class="img-thumbnail" alt="Page-03">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;">
+    <div class="heading3">
+      <h3>
+        🛠️Software Toolkits:
+      </h3>
+    </div>
+    <div class="software-toolkit">
+      <a href="https://www.postgresql.org/" target="_blank">
+        <img src="./assets/icon/PostgreSQL.png" alt="PostgreSQL" height="25" width="24.25">
+      </a>
+      <a href="https://www.databricks.com/" target="_blank">
+        <img src="./assets/icon/Databricks.png" alt="Databricks" height="25" width="23.4042553191">
+      </a>
+      <a href="https://www.microsoft.com/en-in/microsoft-365/excel" target="_blank">
+        <img src="./assets/icon/Microsoft_Excel.png" alt="Microsoft_Excel" height="25" width="28.6259541985">
+      </a>
+      <a href="https://powerbi.microsoft.com/" target="_blank">
+        <img src="./assets/icon/Microsoft_Power-BI.png" alt="Microsoft_Power-BI" height="25" width="18.75">
+      </a>
+    </div>
+  </div>
+  <div class="divider-dotted"></div>
+
+    <div align="center" class="heading2">
+      <h2 class="center">
+        🔍Problem Statement📝
+      </h2>
+    </div>
+    <div class="divider-dashed"></div>
+    <p class="paragraph">
+        <strong>1. Units Sold Analysis:</strong><br>
+        How many units of each product were sold over the specified period?
+        <br><br>
+        <strong>2. Sales and Profit Comparison Chart:</strong><br>
+        Showcase the chart of gross sales, net sales, and profit margins for various products?
+        <br><br>
+        <strong>3. Price Analysis:</strong><br>
+        What is the comparison between manufacturing prices and sales prices of products?
+        <br><br>
+        <strong>4. Discount vs. Profit Analysis:</strong><br>
+        How do discounts offered impact profit margins across various products?
+        <br><br>
+        <strong>5. Geographical Sales Distribution:</strong><br>
+        Map the sales distribution across various countries.
+        <br><br>
+        <strong>6. Discount Analysis by Country:</strong><br>
+        What are the discounts offered in different countries?
+        <br><br>
+        <strong>7. Price Comparison Chart by Country:</strong><br>
+        Visualize the manufacturing price vs the sales price across different countries.
+        <br><br>
+        <strong>8. Segment-wise Sales and Profit Comparison:</strong><br>
+        Visualize the gross sales, net sales, and profit margins across various market segments.
+        <br><br>
+        <strong>9. Segment-wise Discount Analysis:</strong><br>
+        What discounts are provided in different market segments?
+        <br><br>
+        <strong>10. Segment-wise Price Analysis:</strong><br>
+        Compare manufacturing prices to sales prices across different segments?
+        <br><br>
+        <strong>11. Unit Sales Trend:</strong><br>
+        Can we plot a line chart showing the trend of units sold over time?
+        <br><br>
+        <strong>12. Profit and Discount Trend:</strong><br>
+        Can we visualize the trend of profit margins and discounts offered over time?
+        <br><br>
+        <strong>13. Sales and Profit Trend:</strong><br>
+        Can we display a line chart showing the trends of gross sales, net sales, and profit margins over time?
+    </p>
+
+    <div class="heading2">
+      <h2 align="center" class="center">
+        📈Analysis Report🧐
+      </h2>
+    </div>
+    <div class="divider-dashed"></div>
+    
+      <div class="question-heading">
+        1. Units Sold Analysis:
+      </div>
+      <p class="paragraph">
+        &nbsp;&nbsp;• Paseo - (338.24K/30.04%)<br>
+        &nbsp;&nbsp;• VTT - (168.78K/14.99%)<br>
+        &nbsp;&nbsp;• Velo - (162.42K/14.43%)<br>
+        &nbsp;&nbsp;• Amarilla - (155.32K/13.80%)<br>
+        &nbsp;&nbsp;• Montana - (154.20K/13.70%)<br>
+        &nbsp;&nbsp;• Carretera - (146.85K/13.04%)<br>
+        <br>
+      </p>
+     
+     <div align="center" class="question-heading">
+       2. Sales and Profit Comparison Chart:
+     </div>
+     <div class="carousel-inner">
+      <div class="item active" id="slide1">
+        <img src="./assets/snapshot/question_no-2.png" class="img-thumbnail" alt="question_no-2">
+      </div>
+      </div>
+     <br>
+     
+     <div class="question-heading">
+       3. Price Analysis:
+     </div>
+     
+     <p class="paragraph">
+       &nbsp;&nbsp;• VTT<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;- Manufacturing Price: 27.25K<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;- Sale Price: 15.11K<br>
+       <br>
+       &nbsp;&nbsp;• Amarilla<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;- Manufacturing Price: 24.44K<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;- Sale Price: 12.10K<br>
+       <br>
+       &nbsp;&nbsp;• Velo<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;- Manufacturing Price: 13.08K<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;- Sale Price: 12.56K<br>
+       <br>
+       &nbsp;&nbsp;• Paseo<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;- Manufacturing Price: 2.02K<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;- Sale Price: 21.85K<br>
+       <br>
+       &nbsp;&nbsp;• Montana<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;- Manufacturing Price: 0.46K<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;- Sale Price: 10.89K<br>
+       <br>
+       &nbsp;&nbsp;• Carretera<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;- Manufacturing Price: 0.27K<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;- Sale Price: 10.40K<br>
+       <br>
+      </p>
+
+      <div class="question-heading">
+        4. Discount vs. Profit Analysis:
+      </div>
+      <p class="paragraph">
+        &nbsp;&nbsp;• Paseo<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;- Total Discount: 2.60M<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;- Total Profit: 4.80M<br>
+        <br>
+        &nbsp;&nbsp;• Velo<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;- Total Discount: 1.58M<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;- Total Profit: 2.31M<br>
+        <br>
+        &nbsp;&nbsp;• VTT<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;- Total Discount: 1.46M<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;- Total Profit: 3.03M<br>
+        <br>
+        &nbsp;&nbsp;• Amarilla<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;- Total Discount: 1.29M<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;- Total Profit: 2.81M<br>
+        <br>
+        &nbsp;&nbsp;• Montana<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;- Total Discount: 1.16M<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;- Total Profit: 2.11M<br>
+        <br>
+        &nbsp;&nbsp;• Carretera<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;- Total Discount: 1.12M<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;- Total Profit: 1.83M<br>
+        <br>
+      </p>
+
+     <div align="center" class="question-heading">
+       5. Geographical Sales Distribution:
+     </div>
+     <div class="carousel-inner">
+      <div class="item active" id="slide1">
+        <img src="./assets/snapshot/question_no-5.png" class="img-thumbnail" alt="question_no-5">
+      </div>
+      </div>
+     <br>
+
+     <div class="question-heading">
+       6. Discount Analysis by Country:
+     </div>
+     <p class="paragraph">
+       &nbsp;&nbsp;• USA - (2.24M/24.33%)<br>
+       &nbsp;&nbsp;• Canada - (2.04M/22.21%)<br>
+       &nbsp;&nbsp;• Mexico - (1.78M/19.31%)<br>
+       &nbsp;&nbsp;• France - (1.73M/18.77%)<br>
+       &nbsp;&nbsp;• Germany - (1.42M/15.38%)<br>
+       <br>
+     </p>
+
+     <div align="center" class="question-heading">
+       7. Price Comparison Chart by Country:
+     </div>
+     <div class="carousel-inner">
+      <div class="item active" id="slide1">
+        <img src="./assets/snapshot/question_no-7.png" class="img-thumbnail" alt="question_no-7">
+      </div>
+      </div>
+     <br>
+
+     <div align="center" class="question-heading">
+       8. Segment-wise Sales and Profit Comparison:
+     </div>
+     <div class="carousel-inner">
+      <div class="item active" id="slide1">
+        <img src="./assets/snapshot/question_no-8.png" class="img-thumbnail" alt="question_no-8">
+      </div>
+      </div>
+     <br>
+
+     <div class="question-heading">
+       9. Segment-wise Discount Analysis:
+     </div>
+     <p class="paragraph">
+       &nbsp;&nbsp;• Government - 3.90M<br>
+       &nbsp;&nbsp;• Small Business - 3.51M<br>
+       &nbsp;&nbsp;• Enterprise - 1.46M<br>
+       &nbsp;&nbsp;• Midmarket - 200.79K<br>
+       &nbsp;&nbsp;• Channel Partners - 134.57K<br>
+       <br>
+     </p>
+
+     <div class="question-heading">
+       10. Segment-wise Average-Price Analysis:
+     </div>
+     <p class="paragraph">
+       &nbsp;&nbsp;• Small Business<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;- Manufacturing Price: 104$K<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;- Sale Price: 300$K<br>
+       <br>
+       &nbsp;&nbsp;• Channel Partners<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;- Manufacturing Price: 97$<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;- Sale Price: 12$<br>
+       <br>
+       &nbsp;&nbsp;• Government<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;- Manufacturing Price: 97$<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;- Sale Price: 126$<br>
+       <br>
+       &nbsp;&nbsp;• Enterprise<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;- Manufacturing Price: 95$<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;- Sale Price: 125$<br>
+       <br>
+       &nbsp;&nbsp;• Midmarket<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;- Manufacturing Price: 88$<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;- Sale Price: 15$<br>
+       <br>
+     </p>
+
+     <div align="center" class="question-heading">
+       11. Unit Sales Trend:
+     </div>
+     <div class="carousel-inner">
+       <div class="item active" id="slide1">
+         <img src="./assets/snapshot/question_no-11.png" class="img-thumbnail" alt="question_no-11">
+        </div>
+     </div>
+     <br>
+     
+      <div align="center" class="question-heading">
+        12. Profit and Discount Trend:
+      </div>
+      <div class="carousel-inner">
+        <div class="item active" id="slide1">
+          <img src="./assets/snapshot/question_no-12.png" class="img-thumbnail" alt="question_no-12">
+        </div>
+     </div>
+     <br>
+
+     <div align="center" class="question-heading">
+       13. Sales and Profit Trend:
+     </div>
+     <div class="carousel-inner">
+       <div class="item active" id="slide1">
+         <img src="./assets/snapshot/question_no-13.png" class="img-thumbnail" alt="question_no-13">
+       </div>
+      </div>
+      <br>
+
+      <div align="center" class="heading2">
+        <h2>
+          Conclusion📌
+        </h2>
+      </div>
+     <div class="divider-dashed"></div>
+     <p class="paragraph">
+       <strong>1. Sales and Product Performance:</strong><br>
+       &nbsp;&nbsp;• Paseo leads in units sold, demonstrating strong market demand and effective product placement.
+       <br>
+       &nbsp;&nbsp;• VTT and Velo follow closely, contributing significantly to overall sales volumes.
+       <br><br>
+       
+       <strong>2. Price Analysis:</strong><br>
+       &nbsp;&nbsp;• Products like Paseo and Amarilla show substantial profit margins, indicating successful pricing strategies.
+       <br>
+       &nbsp;&nbsp;• Montana and Carretera exhibit lower margins, suggesting potential areas for price optimization.
+       <br><br>
+
+       <strong>3. Discount Impact:</strong><br>
+       &nbsp;&nbsp;• Despite varying discount levels, products like Paseo and Velo maintain robust profitability, validating effective discounting strategies.
+       <br>
+       &nbsp;&nbsp;• Segment-specific discount analyses highlight varying impacts across different customer groups and geographical regions.
+       <br><br>
+
+       <strong>4. Geographical and Segment Analysis:</strong><br>
+       &nbsp;&nbsp;• The USA emerges as a key market with significant discount contributions, influencing overall sales performance.
+       <br>
+       &nbsp;&nbsp;• Government and Small Business segments receive the highest discounts, emphasizing targeted marketing efforts in these areas.
+       <br><br>
+
+       <strong>5. Strategic Insights:</strong><br>
+       &nbsp;&nbsp;• Focus on optimizing pricing strategies for products with lower profit margins like Montana and Carretera.
+       <br>
+       &nbsp;&nbsp;• Align promotional efforts with dominant market preferences and high-discount segments to sustain and enhance profitability.
+       <br>
+      </p>
+
+     <div align="right" class="heading3">
+       Connect with me:
+     </div>
+     <p align="right" class="paragraph">
+       <a href="https://linkedin.com/in/jharajnish" target="_blank">
+         <img src="./assets/icon/LinkedIn.svg" alt="LinkedIn" height="25" width="25">
+       </a>
+
+       <a href="https://github.com/jha-rajnish" target="_blank">
+         <img src="./assets/icon/GitHub.svg" alt="GitHub" height="25" width="25.5555555556">
+       </a>
+
+       <a href="https://instagram.com/rajnish_gallery" target="_blank">
+         <img src="./assets/icon/Instagram.svg" alt="Instagram" height="25" width="25">
+       </a>
+     </p>
+
+   <div style="display: flex; justify-content: space-between;">
+     <p class="paragraph">
+       📂 Visit this Repo:<br>
+       <a href="https://github.com/jha-rajnish/financial_analysis" target="_blank">
+         Financial Analysis
+       </a>
+     </p>
+     <p class="paragraph">
+       ✉ Reach me:<br>
+       <a href="mailto:jharajnish@outlook.in">
+         jharajnish@outlook.in
+       </a>
+     </p>
+   </div>
+ <div class="divider-dotted"></div>
+
+       <!-- Copyright -->
+        <p class="footer-copyright">
+            © 2023 Rajnish Jha, India. All Rights Reserved.
+        </p>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="./js/scripts.js" defer></script>
+</body>
+</html>
